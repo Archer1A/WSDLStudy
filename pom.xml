@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>WSDLStudy</groupId>
+    <artifactId>WSDLStudy</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <properties>
+        <axis2.version>1.7.7</axis2.version>
+        <apache.common.net.ftp>3.3</apache.common.net.ftp>
+        <apache.common.io>2.4</apache.common.io>
+        <xstream.version>1.4.10</xstream.version>
+        <jettison.version>1.4.0</jettison.version>
+    </properties>
+
+    <dependencies>
+        <!-- 调用基于WSDL的WebService使用 axis和axis2 -->
+        <!-- https://mvnrepository.com/artifact/org.apache.axis2/axis2-spring 必须client、AxisFault、addressing、axiom-->
+        <dependency>
+            <groupId>org.apache.axis2</groupId>
+            <artifactId>axis2-spring</artifactId>
+            <version>${axis2.version}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.axis2/axis2-transport-http -->
+        <dependency>
+            <groupId>org.apache.axis2</groupId>
+            <artifactId>axis2-transport-http</artifactId>
+            <version>${axis2.version}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.axis2/axis2-transport-local -->
+        <dependency>
+            <groupId>org.apache.axis2</groupId>
+            <artifactId>axis2-transport-local</artifactId>
+            <version>${axis2.version}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.axis2/axis2-xmlbeans 必须RPCServiceClient-->
+        <dependency>
+            <groupId>org.apache.axis2</groupId>
+            <artifactId>axis2-xmlbeans</artifactId>
+            <version>${axis2.version}</version>
+        </dependency>
+        <!-- XML与Bean相互转换依赖的组件 -->
+        <!-- https://mvnrepository.com/artifact/com.thoughtworks.xstream/xstream -->
+        <dependency>
+            <groupId>com.thoughtworks.xstream</groupId>
+            <artifactId>xstream</artifactId>
+            <version>${xstream.version}</version>
+        </dependency>
+        <!-- XStream序列化和反序列化Bean需要用到的工具包,
+            从com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver中new出来的JettisonMappedXmlDriver()
+            依赖org.codehaus.jettison.Configuration -->
+        <!-- https://mvnrepository.com/artifact/org.codehaus.jettison/jettison -->
+        <dependency>
+            <groupId>org.codehaus.jettison</groupId>
+            <artifactId>jettison</artifactId>
+            <version>${jettison.version}</version>
+        </dependency>
+    </dependencies>
+
+
+</project>
