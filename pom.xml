@@ -57,10 +57,13 @@
             <artifactId>jettison</artifactId>
             <version>${jettison.version}</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.dom4j/dom4j -->
         <dependency>
             <groupId>org.dom4j</groupId>
-            <artifactId>2.1.0</artifactId>
+            <artifactId>dom4j</artifactId>
+            <version>2.1.0</version>
         </dependency>
+
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
